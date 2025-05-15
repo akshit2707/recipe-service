@@ -61,7 +61,7 @@ cache:
   ttl: 10
 
 data-source:
-  base-url: https://dummyjson.com/recipe
+  base-url: recipe
 
 management:
   endpoint.health.show-details: always

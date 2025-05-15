@@ -93,6 +93,18 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
             <version>3.4.5</version>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/org.jeasy/easy-random -->
+        <dependency>
+            <groupId>org.jeasy</groupId>
+            <artifactId>easy-random</artifactId>
+            <version>5.0.0</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>org.jeasy</groupId>
+            <artifactId>easy-random-core</artifactId>
+            <version>5.0.0</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -11,18 +11,18 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class CircuitBreakerConfig {
-    @Bean
-    CircuitBreaker recipeCircuitBreaker (CircuitBreakerRegistry registry) {
-        return registry.circuitBreaker("recipe");
-    }
+  @Bean
+  CircuitBreaker recipeCircuitBreaker(CircuitBreakerRegistry registry) {
+    return registry.circuitBreaker("recipe");
+  }
 
-    @Bean
-    Retry recipeRetry (RetryRegistry registry) {
-        return registry.retry("recipe");
-    }
+  @Bean
+  Retry recipeRetry(RetryRegistry registry) {
+    return registry.retry("recipe");
+  }
 
-    @Bean
-    TimeLimiter recipeTimeLimiter (TimeLimiterRegistry registry) {
-        return registry.timeLimiter("recipe");
-    }
+  @Bean
+  TimeLimiter recipeTimeLimiter(TimeLimiterRegistry registry) {
+    return registry.timeLimiter("recipe");
+  }
 }
