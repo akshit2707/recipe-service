@@ -33,8 +33,36 @@ server:
   port: 8085
 
 
+resilience4j:
+  circuitbreaker:
+    instances:
+      recipe:
+        failureRateThreshold: 50
+        waitDurationInOpenState: 5s
+        permittedNumberOfCallsInHalfOpenState: 3
+        minimumNumberOfCalls: 5
+        slidingWindowType: COUNT_BASED
+        slidingWindowSize: 10
+        eventConsumerBufferSize: 10
+        registerHealthIndicator: true
+  retry:
+    instances:
+      recipe:
+        maxAttempts: 3
+        waitDuration: 1s
+  timelimiter:
+    instances:
+      recipe:
+        timeoutDuration: 5s
+        cancelRunningFuture: true
+
+
 cache:
   ttl: 10
+
 data-source:
   base-url: https://dummyjson.com/recipe
 
+management:
+  endpoint.health.show-details: always
+  health.circuitbreakers.enabled: true

@@ -23,9 +23,7 @@ public class DataLoaderServiceImpl implements DataLoaderService {
 
   @Override
   public String loadData() {
-
     try {
-
       RecipeResponseFromDummyJson responseFromWebsite =
           dummyJsonClient.get().retrieve().bodyToMono(RecipeResponseFromDummyJson.class).block();
       assert responseFromWebsite != null;
@@ -43,7 +41,6 @@ public class DataLoaderServiceImpl implements DataLoaderService {
           });
       finalCount = count.get();
       return "Saved new data: " + finalCount;
-
     } catch (WebClientException exception) {
       log.error("Unable to save the data");
       throw new DataLoaderException(exception.getMessage());
