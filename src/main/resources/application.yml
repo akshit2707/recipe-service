@@ -20,8 +20,6 @@ spring:
     redis:
       port: 6379
       host: localhost
-
-
   security:
     user:
       name: bunnu
@@ -35,7 +33,8 @@ server:
   port: 8085
 
 
-
+cache:
+  ttl: 10
 data-source:
   base-url: https://dummyjson.com/recipe
 
