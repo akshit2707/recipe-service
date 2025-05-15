@@ -3,8 +3,8 @@ spring:
     name: recipe
   datasource:
     url: "jdbc:postgresql://localhost:5432/recipes"
-    username: "superadmin"
-    password: "@k$h!t"
+    username: ${USER_NAME}
+    password: ${PASSWORD}
   jpa:
     hibernate:
       ddl-auto: "update"
@@ -22,8 +22,8 @@ spring:
       host: localhost
   security:
     user:
-      name: bunnu
-      password: R@d#!k@ $hArm@
+      name: ${SECURITY_CONFIG_USER_NAME}
+      password: ${SECURITY_CONFIG_PASSWORD}
 
 logging:
   level:
